@@ -1,0 +1,9 @@
+n = int(input())
+ln = 0
+previous = n
+while n != 0:
+    if n > previous:
+        ln += 1
+    previous = n
+    n = int(input())
+print(ln)
