@@ -1,0 +1,7 @@
+set = set()
+for i in input().split():
+    if i in set:
+        print("YES")
+    else:
+        print("NO")
+        set.add(i)
