@@ -1,0 +1,5 @@
+s = input()
+i = s.find(' ')
+s1 = s[:i]
+s2 = s[(i + 1):]
+print(s2 + ' ' + s1)
