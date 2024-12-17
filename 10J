@@ -1,0 +1,9 @@
+n, k = map(int, input().split())
+correct = {i for i in range(n + 1) if 0 < i % 7 < 6}
+ans = 0
+for i in range(k):
+    a, b = map(int, input().split())
+    ans += len(correct)
+    correct -= {a + b * i for i in range((n - a) // b + 1)}
+    ans -= len(correct)
+print(ans)
