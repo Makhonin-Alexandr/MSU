@@ -1,0 +1,4 @@
+first_class = int(input()) + 1
+second_class = int(input()) + 1
+third_class = int(input()) + 1
+print(first_class // 2 + second_class // 2 + third_class // 2)
