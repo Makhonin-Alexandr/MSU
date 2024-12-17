@@ -1,0 +1,7 @@
+n = int(input()) % 400
+if '00' in str(n):
+    print('NO')
+elif n % 4 != 0:
+    print('NO')
+else:
+    print('YES')
