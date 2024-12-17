@@ -1,0 +1,4 @@
+list_1 = list(map(int, input().split()))
+for i in range(1, len(list_1)):
+    if list_1[i] > list_1[i - 1]:
+        print(list_1[i], end=' ')
