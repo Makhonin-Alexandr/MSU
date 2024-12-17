@@ -1,0 +1,17 @@
+customers = {}
+while True:
+    try:
+        s = input()
+    except (ValueError):
+        break
+    customer, product, count = s.split()
+    if customer not in customers.keys():
+       customers[customer] = {}
+    if product not in customers[customer].keys():
+        customers[customer][product] = 0
+    customers[customer][product] += int(count)
+
+for customer in sorted(customers.keys()):
+    print(customer, ':', sep='')
+    for product in sorted(customers[customer].keys()):
+        print(product, customers[customer][product])
