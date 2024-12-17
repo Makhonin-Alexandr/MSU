@@ -1,0 +1,10 @@
+list_1 = list(map(int, input().split()))
+index_max_element = 0
+index_min_element = 0
+for i in range(1, len(list_1)):
+    if list_1[i] > list_1[index_max_element]:
+        index_max_element = i
+    elif list_1[i] < list_1[index_min_element]:
+        index_min_element = i
+list_1[index_max_element], list_1[index_min_element] = list_1[index_min_element], list_1[index_max_element]
+print(' '.join(map(str, list_1)))
