@@ -1,0 +1,6 @@
+n = int(input())
+ln = 0
+while n != 0:
+    ln += 1
+    n = int(input())
+print(ln)
