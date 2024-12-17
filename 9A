@@ -1,0 +1,14 @@
+n, m = map(int, input().split())
+list_1 = []
+for i in range(n):
+    list_1.append(list(map(int, input().split())))
+max = list_1[0][0]
+max_x = 0
+max_y = 0
+for i in range(n):
+    for j in range(m):
+        if list_1[i][j] > max:
+            max = list_1[i][j]
+            max_x = i
+            max_y = j
+print(max_x, max_y)
