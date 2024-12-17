@@ -1,0 +1,7 @@
+n, m = map(int, input().split())
+list_1 = [['*'] * m for i in range(n)]
+for i in range(n):
+    for j in range(i % 2, m, 2):
+        list_1[i][j] = '.'
+for i in range(n):
+    print(*list_1[i])
