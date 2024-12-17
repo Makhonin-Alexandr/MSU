@@ -1,0 +1,8 @@
+synonyms = {}
+n = int(input())
+words = input().split()
+for i in range(n):
+    synonyms[words[0]] = words[1]
+    synonyms[words[1]] = words[0]
+    words = input().split()
+print(synonyms[words[0]])
