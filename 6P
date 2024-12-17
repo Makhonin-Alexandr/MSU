@@ -1,0 +1,14 @@
+n = int(input())
+ln = 0
+max_ln = 0
+previous = n
+while n != 0:
+    if n == previous:
+        ln += 1
+    else:
+        max_ln = max(ln, max_ln)
+        previous = n
+        ln = 1
+    n = int(input())
+max_ln = max(ln, max_ln)
+print(max_ln)
