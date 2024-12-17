@@ -1,0 +1,16 @@
+n = int(input())
+count = {}
+words = []
+for i in range(n):
+    words += input().split()
+for word in words:
+    if word not in count.keys():
+        count[word] = 0
+    count[word] += 1
+
+ans = ''
+count[ans] = -1
+for word, count_word in count.items():
+    if count[word] > count[ans] or (count[word] == count[ans] and word < ans):
+        ans = word
+print(ans)
