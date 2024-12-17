@@ -1,0 +1,28 @@
+n = int(input())
+dictionary = {}
+for i in range(n):
+    s = input()
+    no_tire = True
+    main_word = ''
+    word = ''
+    for c in s:
+        if c == '-':
+            no_tire = False
+        elif c == ',':
+            if word not in dictionary.keys():
+                dictionary[word] = []
+            dictionary[word].append(main_word)
+            word = ''
+        elif c.isalpha():
+            if no_tire:
+                main_word += c
+            else:
+                word += c
+    if word not in dictionary.keys():
+        dictionary[word] = []
+    dictionary[word].append(main_word)
+
+print(len(dictionary))
+for word in sorted(dictionary.keys()):
+    print(word, '-', end=' ')
+    print(', '.join(sorted(dictionary[word])))
