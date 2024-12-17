@@ -1,0 +1,6 @@
+list_1 = list(map(int, input().split()))
+count_various_elements = 1
+for i in range(len(list_1) - 1):
+    if list_1[i] < list_1[i + 1]:
+        count_various_elements += 1
+print(count_various_elements)
