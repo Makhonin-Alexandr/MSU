@@ -1,0 +1,6 @@
+n = int(input())
+list_1 = [[0] * n for i in range(n)]
+for i in range(n):
+    for j in range(n):
+        list_1[i][j] = abs(i - j)
+    print(*list_1[i])
