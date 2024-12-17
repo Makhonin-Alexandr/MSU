@@ -1,0 +1,6 @@
+count = {}
+for word in input().split():
+    if word not in count.keys():
+        count[word] = 0
+    print(count[word], end=' ')
+    count[word] += 1
