@@ -1,0 +1,7 @@
+N = int(input())
+M = int(input())
+if N > M:
+    N, M = M, N
+x = int(input())
+y = int(input())
+print(min(x, N - x, y, M - y))
