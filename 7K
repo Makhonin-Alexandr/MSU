@@ -1,0 +1,6 @@
+list_1 = list(map(int, input().split()))
+k = int(input())
+for i in range(k, len(list_1) - 1):
+    list_1[i] = list_1[i+1]
+list_1.pop()
+print(' '.join(map(str, list_1)))
