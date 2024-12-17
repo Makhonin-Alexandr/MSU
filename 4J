@@ -1,0 +1,4 @@
+counter = 0
+for i in range(1, int(input()) + 1):
+    counter = counter * 10 + i
+    print(counter)
