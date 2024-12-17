@@ -1,0 +1,12 @@
+ans = {i for i in range(1, int(input()) + 1)}
+new = set()
+s = input()
+while s != 'HELP':
+    if s == 'YES':
+        ans &= new
+    elif s == 'NO':
+        ans -= new
+    else:
+        new = set(map(int, s.split()))
+    s = input()
+print(*sorted(ans))
