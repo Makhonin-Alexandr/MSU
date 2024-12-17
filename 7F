@@ -1,0 +1,6 @@
+list_1 = list(map(int, input().split()))
+index_max = 0
+for index in range(len(list_1)):
+    if list_1[index] > list_1[index_max]:
+        index_max = index
+print(list_1[index_max], index_max)
