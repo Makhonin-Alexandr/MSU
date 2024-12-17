@@ -1,0 +1,10 @@
+countries = {}
+n = int(input())
+for i in range(n):
+    s = input().split()
+    for j in range(1, len(s)):
+        countries[s[j]] = s[0]
+m = int(input())
+for i in range(m):
+    city = input()
+    print(countries[city])
