@@ -1,0 +1,7 @@
+list_1 = list(map(int, input().split()))
+for index_1 in range(len(list_1)):
+    index_2 = 0
+    while index_2 < len(list_1) and (list_1[index_1] != list_1[index_2] or index_1 == index_2):
+        index_2 += 1
+    if index_2 == len(list_1):
+        print(list_1[index_1])
