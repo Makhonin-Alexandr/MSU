@@ -1,0 +1,3 @@
+for item in input().split():
+    if int(item) % 2 == 0:
+        print(item, end=' ')
