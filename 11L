@@ -1,0 +1,42 @@
+def dfs(v):
+    global time
+    time += 1
+    tin[v] = time
+    for u in graph[v]:
+        dfs(u)
+    time += 1
+    tout[v] = time
+
+
+def upper(a, b):
+    return tin[a] <= tin[b] < tout[a]
+
+
+n = int(input())
+time = 0
+graph = {}
+tin = {}
+tout = {}
+parents = set()
+descendants = set()
+for i in range(n - 1):
+    descendant, parent = input().split()
+    descendants.add(descendant)
+    parents.add(parent)
+    if parent not in graph.keys():
+        graph[parent] = []
+    if descendant not in graph.keys():
+        graph[descendant] = []
+    graph[parent].append(descendant)
+for v in parents - descendants:
+    dfs(v)
+m = int(input())
+for i in range(m):
+    line = input()
+    a, b = line.split()
+    if upper(a, b):
+        print(1)
+    elif upper(b, a):
+        print(2)
+    else:
+        print(0)
