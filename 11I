@@ -1,0 +1,22 @@
+words = {}
+count = 0
+for i in range(int(input())):
+    stress = input()
+    word = stress.lower()
+    if word not in words.keys():
+        words[word] = []
+    words[word].append(stress)
+
+for stress in input().split():
+    word = stress.lower()
+    if word in words.keys():
+        if stress not in words[word]:
+            count += 1
+    else:
+        upper = 0
+        for c in stress:
+            if c.isupper():
+                upper += 1
+        if upper != 1:
+            count += 1
+print(count)
