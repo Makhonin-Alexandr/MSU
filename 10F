@@ -1,0 +1,5 @@
+n = int(input())
+list_1=[]
+for i in range(n):
+    list_1.append(input().split())
+print(len(set(i for j in list_1 for i in j)))
