@@ -1,0 +1,12 @@
+n = int(input())
+count_votes = {}
+for i in range(n):
+    s = input()
+    candidate, votes = s.split()
+    if candidate not in count_votes.keys():
+        count_votes[candidate] = 0
+    count_votes[candidate] += int(votes)
+
+count_votes = sorted(count_votes.items())
+for candidate, votes in count_votes:
+    print(candidate, votes, sep=' ')
