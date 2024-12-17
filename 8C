@@ -1,0 +1,9 @@
+def capitalize(s):
+    counter = 0
+    s = s.replace(s[0], chr(ord(s[0]) - 32), 1)
+    for i in range(s.count(' ')):
+        counter = s.find(' ', counter + 1)
+        s = s[:counter + 1] + chr(ord(s[counter + 1]) - 32) + s[counter + 2:]
+    return s
+s = input()
+print(capitalize(s))
