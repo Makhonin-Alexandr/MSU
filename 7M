@@ -1,0 +1,8 @@
+list_1 = list(map(int, input().split()))
+number = []
+count = 0
+for element in list_1:
+    if element not in number:
+        number.append(element)
+        count += list_1.count(element) * (list_1.count(element) - 1) // 2
+print(count)
