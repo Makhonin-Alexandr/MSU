@@ -1,0 +1,12 @@
+n = int(input())
+f1 = 0
+f = 1
+i = 1
+if n != 0:
+    while i < n:
+        (f, f1) = (f1, f)
+        f += f1
+        i += 1
+    print(f)
+else:
+    print(f1)
