@@ -1,0 +1,6 @@
+list_1 = list(map(int, input().split()))
+index = 0
+while index < len(list_1) - 1 and list_1[index] * list_1[index + 1] <= 0:
+    index += 1
+if index < len(list_1) - 1:
+    print(list_1[index], list_1[index + 1])
