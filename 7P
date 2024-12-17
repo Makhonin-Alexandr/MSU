@@ -1,0 +1,17 @@
+queen = []
+yes = 0
+for i in range(8):
+    queen.append(list(map(int, input().split())))
+
+for i in range(len(queen)):
+    for j in range(i + 1, len(queen)):
+        queen1 = queen[i]
+        queen2 = queen[j]
+        if queen1[0] == queen2[0] or queen1[1] == queen2[1] or abs(queen1[0] - queen2[0]) == abs(queen1[1] - queen2[1]):
+            print('YES')
+            yes = 1
+            break
+    if yes == 1:
+        break
+if yes == 0:
+    print('NO')
