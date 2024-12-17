@@ -1,0 +1,11 @@
+max = 0
+counter = 0
+counter_max = 0
+n = -1
+while n != 0:
+    if n > max:
+        max = n
+        counter_max = counter
+    n = int(input())
+    counter += 1
+print(counter_max - 1)
