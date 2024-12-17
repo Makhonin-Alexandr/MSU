@@ -1,0 +1,20 @@
+files = {}
+n = int(input())
+for i in range(n):
+    s = input().split()
+    files[s[0]] = []
+    for j in range(1, len(s)):
+        files[s[0]].append(s[j])
+m = int(input())
+for i in range(m):
+    operation, file = input().split()
+    if operation == 'read':
+        operation = 'R'
+    elif operation == 'write':
+        operation = 'W'
+    else:
+        operation = 'X'
+    if operation in files[file]:
+        print('OK')
+    else:
+        print('Access denied')
