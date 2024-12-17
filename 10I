@@ -1,0 +1,19 @@
+intersection = set()
+union = set()
+
+for i in range(int(input())):
+    languages = set()
+    for j in range(int(input())):
+        languages.add(input())
+    if i != 0:
+        intersection &= languages
+    else:
+        intersection = languages
+    union |= languages
+
+print(len(intersection))
+for language in sorted(intersection):
+    print(language)
+print(len(union))
+for language in sorted(union):
+    print(language)
