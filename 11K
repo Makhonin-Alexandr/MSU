@@ -1,0 +1,24 @@
+def dfs(v, h):
+    height[v] = h
+    for u in graph[v]:
+        dfs(u, h + 1)
+
+
+n = int(input())
+graph = {}
+height = {}
+parents = set()
+descendants = set()
+for i in range(n - 1):
+    descendant, parent = input().split()
+    descendants.add(descendant)
+    parents.add(parent)
+    if parent not in graph.keys():
+        graph[parent] = []
+    if descendant not in graph.keys():
+        graph[descendant] = []
+    graph[parent].append(descendant)
+for v in parents - descendants:
+    dfs(v, 0)
+for v in sorted(height.keys()):
+    print(v, height[v])
