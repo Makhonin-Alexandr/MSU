@@ -1,0 +1,15 @@
+count = {}
+n = int(input())
+for i in range(n):
+    for word in input().split():
+        if word not in count.keys():
+            count[word] = 0
+        count[word] += 1
+
+words = []
+for word, count_word in count.items():
+    words.append((-count_word, word))
+
+words.sort()
+for count_word, word in words:
+    print(word)
